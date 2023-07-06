@@ -45,7 +45,7 @@ const Header = () => {
           target_valence: `${valance}`,
         },
         headers: {
-          Authorization:process.env.SPOT,
+          Authorization:`Bearer BQA60068n6PaajttBMi5flF0SczLIQxd0pRrnch7muNJms2ZClhsk-EJtR5JhwStfCoQ9RK4KBjL9Kojzg4k_TklDP8qJ8ykQ-Zir_IMl67zY7Czot4`,
         },
       }
     );
