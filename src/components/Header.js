@@ -45,8 +45,7 @@ const Header = () => {
           target_valence: `${valance}`,
         },
         headers: {
-          Authorization:
-            process.env.SPOT,
+          Authorization:process.env.SPOT,
         },
       }
     );
