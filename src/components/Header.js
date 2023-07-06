@@ -46,7 +46,7 @@ const Header = () => {
         },
         headers: {
           Authorization:
-            "Bearer BQCLgkhPV78jyCF1ox-iOJht35HJwtyC49t-1eGKH39HKV2vSUuodYGIuG-o4vrFDNeA6CLajH_qDtQQ4lujHvVFd-U6OZGhOwlLlgAUYXrpY1fdBOM",
+            process.env.SPOT,
         },
       }
     );
