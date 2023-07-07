@@ -11,7 +11,7 @@ const Header = () => {
   const [spotifyRes, setspotifyRes] = useState([]);
   const [data, setData] = useState(["upload your image first", 1]);
   const [started,setStarted] = useState(false)
-  const [spotkey,setSpotkey] = useState("BQA60068n6PaajttBMi5flF0SczLIQxd0pRrnch7muNJms2ZClhsk-EJtR5JhwStfCoQ9RK4KBjL9Kojzg4k_TklDP8qJ8ykQ-Zir_IMl67zY7Czot4")
+  const [spotkey,setSpotkey] = useState("BQD3spyxlPcRIktwfcmM-MCteSmw7x7lc99q8DexS-W3zh5Aek9iEwwrrxyKh_eFMqRjbzqLtk-1OeLze8OozZ61jA6DkfcuVRLnyOHEey7mt4p8Lb8")
   useEffect(() => {
     console.log(data);
     setText(data[0]);
@@ -46,7 +46,7 @@ const Header = () => {
           target_valence: `${valance}`,
         },
         headers: {
-          Authorization:`Bearer BQD3spyxlPcRIktwfcmM-MCteSmw7x7lc99q8DexS-W3zh5Aek9iEwwrrxyKh_eFMqRjbzqLtk-1OeLze8OozZ61jA6DkfcuVRLnyOHEey7mt4p8Lb8`,
+          Authorization:`Bearer ${spotkey}`,
         },
       }
     );
