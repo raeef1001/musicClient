@@ -11,14 +11,15 @@ const Header = () => {
   const [spotifyRes, setspotifyRes] = useState([]);
   const [data, setData] = useState(["upload your image first", 1]);
   const [started,setStarted] = useState(false)
-
+  const [spotkey,setSpotkey] = useState("BQA60068n6PaajttBMi5flF0SczLIQxd0pRrnch7muNJms2ZClhsk-EJtR5JhwStfCoQ9RK4KBjL9Kojzg4k_TklDP8qJ8ykQ-Zir_IMl67zY7Czot4")
   useEffect(() => {
     console.log(data);
     setText(data[0]);
     spotify(data);
     console.log(spotifyRes);
+    console.log(spotkey);
     
-  }, [data]);
+  }, [data,spotkey]);
 
   const cloudName = "hzxyensd5";
   const uploadPreset = "aoh4fpwm";
@@ -45,7 +46,7 @@ const Header = () => {
           target_valence: `${valance}`,
         },
         headers: {
-          Authorization:`Bearer BQA60068n6PaajttBMi5flF0SczLIQxd0pRrnch7muNJms2ZClhsk-EJtR5JhwStfCoQ9RK4KBjL9Kojzg4k_TklDP8qJ8ykQ-Zir_IMl67zY7Czot4`,
+          Authorization:`Bearer ${spotkey}`,
         },
       }
     );
@@ -65,12 +66,13 @@ const Header = () => {
         var otherUrl = encodeURIComponent(result.info.secure_url);
         setUrl(newurl);
         server(otherUrl);
+        spotkeyGen()
        
       }
     }
   );
 
-  // fetfching ocr data
+  // fetfching  data from my server 
   async function server(url) {
     await fetch(`https://musicrecom.onrender.com/test/${url}`)
       .then((res) => res.json())
@@ -81,7 +83,14 @@ const Header = () => {
         console.log(error);
       });
   }
-
+  async function spotkeyGen() {
+    await fetch('https://musicrecom.onrender.com/spotkey')
+      .then((res) => res.json())
+      .then((data) => setSpotkey(data))
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
   return (
     <div className="flex flex-col justify-center content-center">
       <div>
