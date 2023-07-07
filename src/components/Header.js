@@ -46,7 +46,7 @@ const Header = () => {
           target_valence: `${valance}`,
         },
         headers: {
-          Authorization:`Bearer BQA60068n6PaajttBMi5flF0SczLIQxd0pRrnch7muNJms2ZClhsk-EJtR5JhwStfCoQ9RK4KBjL9Kojzg4k_TklDP8qJ8ykQ-Zir_IMl67zY7Czot4`,
+          Authorization:`Bearer BQD3spyxlPcRIktwfcmM-MCteSmw7x7lc99q8DexS-W3zh5Aek9iEwwrrxyKh_eFMqRjbzqLtk-1OeLze8OozZ61jA6DkfcuVRLnyOHEey7mt4p8Lb8`,
         },
       }
     );
