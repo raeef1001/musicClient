@@ -90,6 +90,7 @@ const Header = () => {
       .catch(function (error) {
         console.log(error);
       });
+      console.log(spotkey)
   }
   return (
     <div className="flex flex-col justify-center content-center">
